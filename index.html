@@ -448,7 +448,15 @@
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
-
+	<script>
+		// Agrega un event listener para el evento 'submit' del formulario
+		document.querySelector("form").addEventListener("submit", function () {
+			// Redirecciona al usuario a confirmacion.html después de 2 segundos
+			setTimeout(function () {
+				window.location.href = "confirmacion.html";
+			}, 2000); // Cambia este valor (en milisegundos) según lo que consideres adecuado
+		});
+	</script>
 
 </body>
 
