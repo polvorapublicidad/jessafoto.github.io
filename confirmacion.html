@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmación de Envío de Correo</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+
+        .video-background {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .video-background video {
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        /* Estilo para el formulario invisible */
+        form {
+            display: none;
+            /* Hacer el formulario invisible */
+        }
+    </style>
+</head>
+
+<body onload="reloadPage()">
+    <!--
+    <form id="emailForm" method="post" action="index.html">
+         Puedes agregar campos ocultos o los campos que desees enviar 
+         Por ejemplo, para enviar un mensaje de éxito 
+        <input type="hidden" name="confirmation" value="Correo enviado con éxito">
+    </form>
+-->
+
+    <div class="video-background">
+        <video autoplay muted loop>
+            <source src="images/danza.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="content">
+        <h1>¡Correo enviado con éxito!</h1>
+        <p>Gracias por ponerte en contacto con nosotros. Tu correo ha sido enviado correctamente.</p>
+        <!-- Botón para volver a la página principal -->
+        <!-- Al hacer clic, se enviará el formulario invisible -->
+        <a href="index.html">Volver a la página principal</a>
+    </div>
+
+    <!-- Script para enviar el formulario 
+    <script>
+        function submitForm() {
+            document.getElementById("emailForm").submit(); // Envía el formulario
+        }
+
+        function reloadPage() {
+            setTimeout(function () {
+                window.location.reload();
+            }, 2000); // Cambia este valor (en milisegundos) según lo que consideres adecuado
+        }
+    </script>
+    -->
+</body>
+
+</html>
