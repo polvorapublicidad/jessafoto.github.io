@@ -53,14 +53,15 @@
 
         /* Estilo para el formulario invisible */
         form {
-            display: none; /* Hacer el formulario invisible */
+            display: none;
+            /* Hacer el formulario invisible */
         }
     </style>
 </head>
 
 <body>
     <!-- Formulario invisible para enviar datos -->
-    <form id="emailForm" method="post" action="index.html">
+    <form id="emailForm" method="post" action="https://jessafoto-github-io.vercel.app/index.html">
         <!-- Puedes agregar campos ocultos o los campos que desees enviar -->
         <!-- Por ejemplo, para enviar un mensaje de éxito -->
         <input type="hidden" name="confirmation" value="Correo enviado con éxito">
@@ -80,12 +81,18 @@
         <button onclick="submitForm()">Volver a la página principal</button>
     </div>
 
-    <!-- Script para enviar el formulario -->
+    <!-- Script para enviar el formulario y recargar la página después de cierto tiempo -->
     <script>
         function submitForm() {
             document.getElementById("emailForm").submit(); // Envía el formulario
         }
+
+        // Función para recargar la página después de cierto tiempo
+        setTimeout(function () {
+            location.reload(); // Recarga la página
+        }, 5000); // Tiempo en milisegundos (en este caso, 5 segundos)
     </script>
 </body>
 
 </html>
+
