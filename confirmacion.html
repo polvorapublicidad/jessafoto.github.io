@@ -4,53 +4,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Confirmación de Envío</title>
+    <title>Confirmación de Envío de Correo</title>
     <style>
         body {
+            margin: 0;
+            padding: 0;
+            color: #fff;
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            text-align: center;
-            padding: 50px;
         }
 
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
-            background-color: #fff;
-            border-radius: 8px;
-            padding: 30px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        .video-background {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .video-background video {
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            padding: 20px;
+            text-align: center;
         }
 
         h1 {
-            color: #333;
-        }
-
-        p {
+            font-size: 36px;
             margin-bottom: 20px;
         }
 
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 4px;
-        }
-
-        .button:hover {
-            background-color: #0056b3;
+        p {
+            font-size: 18px;
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <h1>¡Mensaje Enviado!</h1>
-        <p>Gracias por contactarme. Tu mensaje ha sido enviado correctamente.</p>
-        <p>Nos pondremos en contacto contigo lo antes posible.</p>
-        <a href="index.html" class="button">Volver a Inicio</a>
+    <div class="video-background">
+        <video autoplay muted loop>
+            <source src="images/danza.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="content">
+        <h1>¡Correo enviado con éxito!</h1>
+        <p>Gracias por ponerte en contacto con nosotros. Tu correo ha sido enviado correctamente.</p>
+        <p><a href="https://jessafoto-github-io.vercel.app/">Volver a la página principal</a></p>
     </div>
 </body>
 
