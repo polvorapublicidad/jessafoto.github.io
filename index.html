@@ -548,30 +548,27 @@
 				</div>
 				<div>
 					<section>
+							<h2>Enviame un correo..</h2>
+							<form action="https://formsubmit.co/ericksaldivarregalado@gmail.com" method="POST"
+								onsubmit="return validateForm()">
+								<label for="name">Nombre</label>
+								<input type="text" name="name" id="name" required>
 
-						<h2>Enviame un correo..</h2>
-				
-						<form action="https://formsubmit.co/ericksaldivarregalado@gmail.com" method="POST">
-							<label for="name">Nombre</label>
-							<input type="text" name="name" id="name">
+								<label for="email">Correo Electrónico</label>
+								<input type="email" name="email" id="email" required>
 
-							<label for="email">Correo Electrónico</label>
-							<input type="email" name="email" id="email">
+								<label for="subject">Asunto</label>
+								<input type="text" name="subject" id="subject" required>
 
-							<label for="subject">Asunto</label>
-							<input type="text" name="subject" id="subject">
+								<label for="comments">Comentarios</label>
+								<textarea name="comments" id="comments" cols="30" rows="5" required></textarea>
 
-							<label for="comments">Comentarios</label>
-							<textarea name="comments" id="comments" cols="30" rows="5"></textarea>
-
-							<input type="submit" value="Enviar" class="btn">
-							<!-- Cambia el valor de _next para dirigir al usuario a confirmacion.html -->
-							<input type="hidden" name="_next" value="confirmacion.html">
-							<input type="hidden" name="_captcha" value="false">
-						</form>
-						
-
-					</section>
+								<input type="submit" value="Enviar" class="btn">
+								<!-- Cambia el valor de _next para dirigir al usuario a confirmacion.html -->
+								<input type="hidden" name="_next" value="confirmacion.html">
+								<input type="hidden" name="_captcha" value="false">
+							</form>
+						</section>
 
 
 
@@ -600,6 +597,22 @@
 			}, 2000); // Cambia este valor (en milisegundos) según lo que consideres adecuado
 		});
 	</script>
+
+<script>
+		function validateForm() {
+			var name = document.getElementById("name").value;
+			var email = document.getElementById("email").value;
+			var subject = document.getElementById("subject").value;
+			var comments = document.getElementById("comments").value;
+
+			if (name === "" || email === "" || subject === "" || comments === "") {
+				alert("Por favor completa todos los campos antes de enviar el formulario.");
+				return false;
+			}
+			return true;
+		}
+	</script>
+	
 
 </body>
 
