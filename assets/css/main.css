@@ -1177,7 +1177,8 @@ table.alt tfoot {
 	-ms-transition: -ms-transform 0.5s ease;
 	transition: transform 0.5s ease;
 	-webkit-overflow-scrolling: touch;
-	background: rgba(36, 38, 41, 0.975);
+	background: rgba(36, 38, 41, 0.6);
+	/* Opacidad ajustada a 0.8 */
 	bottom: 4em;
 	left: 0;
 	max-height: calc(80vh - 4em);
