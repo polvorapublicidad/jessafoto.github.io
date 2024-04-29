@@ -141,6 +141,7 @@
 	.btn:hover {
 		background-color: #34a58e;
 
+
 		;
 	}
 
@@ -282,6 +283,53 @@
 	.icons li.facebook {
 		margin-right: 30px;
 		/* Espacio adicional para separar los íconos */
+	}
+
+	.photography-container {
+		text-align: center;
+		margin-top: 20px;
+		/* Espacio adicional entre el círculo y el texto */
+		display: flex;
+		/* Cambiado a un contenedor de tipo flex */
+		justify-content: center;
+		/* Centra los elementos horizontalmente */
+		align-items: center;
+		/* Centra los elementos verticalmente */
+		height: 100vh;
+		/* Hace que el contenedor ocupe toda la altura de la ventana */
+	}
+
+	.photography {
+		width: 400px;
+		/* Ajusta el ancho según tus necesidades */
+		height: 400px;
+		/* Mismo valor que el ancho para crear un círculo */
+
+		/* Cambiado a un color más discreto */
+		border-radius: 50%;
+		/* Hace que el contenedor sea circular */
+		background-image: url('https://i.postimg.cc/05Z8PBWy/57511540-1207412372757705-2704877889425244160-n.jpg');
+		background-size: cover;
+		background-position: center;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		/* Alinea el contenido verticalmente */
+	}
+
+	.photography h2,
+	.photography p {
+		font-size: 30px;
+		/* Reducido el tamaño de la fuente */
+		color: #ffffff;
+		/* Cambiado a blanco */
+
+		/* Cambiado a una fuente sans-serif */
+		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+		/* Agregado efecto de sombra al texto */
+		margin: 0;
+		/* Elimina el margen predeterminado del texto */
 	}
 </style>
 
@@ -587,14 +635,18 @@
 		<footer id="footer" class="panel">
 			<div class="inner split">
 				<div>
-					<section>
-						<h2>JESSA FOTOGRAFÍA</h2>
-						<p>
-					
-					Captura los momentos que quieres recordar por siempre. Agenda tu sesión y obtén un 15% de descuento.
-						</p>
-					</section>
 
+					<section class="photography">
+
+						<h2>Jessa Fotografía</h2>
+
+
+					</section>
+					<br>
+					<p>
+						Captura los momentos que quieres recordar por siempre.<br>
+						Agenda tu sesión y obten un <strong>15% de descuento.</strong>
+					</p>
 
 					<section>
 						<h4>Redes Sociales</h4>
