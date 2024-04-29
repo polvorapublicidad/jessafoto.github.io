@@ -9,8 +9,10 @@
         body {
             margin: 0;
             padding: 0;
-            color: #fff;
+            color: #ffffff;
             font-family: Arial, sans-serif;
+            background-color: #000000;
+            /* Cambiado a un color de fondo más oscuro */
         }
 
         .video-background {
@@ -40,41 +42,47 @@
             z-index: 1;
             padding: 20px;
             text-align: center;
+            opacity: 0;
+            /* Inicialmente oculto */
+            transition: opacity 1s ease 0.2s;
+            /* Transición de la opacidad */
         }
 
         h1 {
             font-size: 36px;
             margin-bottom: 20px;
+            color: #ffffff;
+            /* Color del título */
         }
 
         p {
             font-size: 18px;
-        }
-
-        /* Estilo para el formulario invisible */
-        form {
-            display: none;
-            /* Hacer el formulario invisible */
+            color: #ffffff;
+            /* Color del texto */
+            margin-bottom: 20px;
         }
 
         /* Estilo para el enlace de volver como botón */
         .btn-link {
             display: inline-block;
             padding: 10px 20px;
-            background-color: #007bff;
-            color: #fff;
+            background-color: #333333;
+            /* Cambiado a un color de fondo más oscuro */
+            color: #ffffff;
+            /* Color del texto */
             text-decoration: none;
             border-radius: 5px;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.1s ease;
         }
 
         .btn-link:hover {
-            background-color: #0056b3;
+            background-color: #555555;
+            /* Cambio de color de fondo al pasar el ratón */
         }
     </style>
 </head>
 
-<body onload="reloadPage()">
+<body onload="showContent()">
     <!--
     <form id="emailForm" method="post" action="index.html">
          Puedes agregar campos ocultos o los campos que desees enviar 
@@ -85,13 +93,13 @@
 
     <div class="video-background">
         <video autoplay muted loop>
-            <source src="images/Danza.mp4" type="video/mp4">
+            <source src="images/danza.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </div>
     <div class="content">
         <h1>¡Muchas Gracias!</h1>
-        <p>En breve me pondre en contacto contigo.</p>
+        <p>En breve me pondré en contacto contigo.</p>
         <!-- Botón estilizado como enlace -->
         <a href="index.html" class="btn-link">Volver a la página principal</a>
     </div>
@@ -109,6 +117,13 @@
         }
     </script>
     -->
+
+    <script>
+        function showContent() {
+            var content = document.querySelector('.content');
+            content.style.opacity = '1'; // Cambia la opacidad a 1 (visible) después de 3 segundos
+        }
+    </script>
 </body>
 
 </html>
