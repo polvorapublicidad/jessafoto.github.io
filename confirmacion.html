@@ -5,13 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Confirmación de Envío de Correo</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
     <style>
         body {
             margin: 0;
             padding: 0;
             color: #ffffff;
             font-family: Arial, sans-serif;
-            background-color: #000000;
+
             /* Cambiado a un color de fondo más oscuro */
         }
 
@@ -53,6 +55,8 @@
             margin-bottom: 20px;
             color: #ffffff;
             /* Color del título */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            /* Sombra para el texto */
         }
 
         p {
@@ -60,6 +64,8 @@
             color: #ffffff;
             /* Color del texto */
             margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            /* Sombra para el texto */
         }
 
         /* Estilo para el enlace de volver como botón */
@@ -72,24 +78,87 @@
             /* Color del texto */
             text-decoration: none;
             border-radius: 5px;
-            transition: background-color 0.1s ease;
+            transition: background-color 0.1s ease, color 0.1s ease;
+            /* Agregado color al hover */
         }
 
         .btn-link:hover {
-            background-color: #555555;
+            background-color: #34a58e;
             /* Cambio de color de fondo al pasar el ratón */
+        }
+
+        .profile-image {
+            margin: 50px auto;
+            /* Margen superior e inferior de 50px y centrado horizontalmente */
+            width: 350px;
+            /* Establece un ancho fijo para la imagen */
+            height: 350px;
+            /* Establece una altura fija para la imagen */
+            border-radius: 50%;
+            /* Hace la imagen circular */
+            overflow: hidden;
+            /* Oculta cualquier parte de la imagen que exceda el borde redondeado */
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            /* Agrega una sombra a la imagen */
+        }
+
+        .profile-image img {
+            display: block;
+            /* Asegura que la imagen sea un bloque para poder aplicar márgenes automáticos */
+            width: 100%;
+            /* Ajusta la imagen para que ocupe todo el espacio disponible dentro del div */
+            height: auto;
+            /* Ajusta la altura automáticamente para mantener la relación de aspecto */
+        }
+
+        .social-icons {
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            margin-right: 10px;
+            color: #ffffff;
+            font-size: 24px;
+            text-decoration: none;
+            transition: color 0.1s ease;
+            /* Agregado color al hover */
+        }
+
+        .social-icons a:hover {
+            color: #34a58e;
+            /* Cambio de color al pasar el ratón */
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            margin-top: 0;
+            padding: 10px 0;
+        }
+
+        .footer {
+            color: #fff;
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            /* Tamaño de fuente reducido */
+            transition: color 0.3s ease;
+        }
+
+        .footer a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: #34a58e;
         }
     </style>
 </head>
 
 <body onload="showContent()">
-    <!--
-    <form id="emailForm" method="post" action="index.html">
-         Puedes agregar campos ocultos o los campos que desees enviar 
-         Por ejemplo, para enviar un mensaje de éxito 
-        <input type="hidden" name="confirmation" value="Correo enviado con éxito">
-    </form>
--->
+
 
     <div class="video-background">
         <video autoplay muted loop>
@@ -98,25 +167,25 @@
         </video>
     </div>
     <div class="content">
+        <div class="profile-image">
+            <a href='https://jessafoto-github-io.vercel.app/index.html' target=''><img
+                    src='https://i.postimg.cc/bw1ZQz7R/74286724-1373317069500567-6721736376447926272-n.jpg'
+                    alt='74286724-1373317069500567-6721736376447926272-n' /></a>
+        </div>
+
         <h1>¡Muchas Gracias!</h1>
         <p>En breve me pondré en contacto contigo.</p>
         <!-- Botón estilizado como enlace -->
         <a href="index.html" class="btn-link">Ver Portafolio</a>
+
+        <!-- Iconos de redes sociales -->
+        <div class="social-icons">
+            <a href="https://www.facebook.com/jessafotografia"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/espejocosmico_/"><i class="fab fa-instagram"></i></a>
+        </div>
     </div>
 
-    <!-- Script para enviar el formulario 
-    <script>
-        function submitForm() {
-            document.getElementById("emailForm").submit(); // Envía el formulario
-        }
 
-        function reloadPage() {
-            setTimeout(function () {
-                window.location.reload();
-            }, 2000); // Cambia este valor (en milisegundos) según lo que consideres adecuado
-        }
-    </script>
-    -->
 
     <script>
         function showContent() {
@@ -124,6 +193,14 @@
             content.style.opacity = '1'; // Cambia la opacidad a 1 (visible) después de 3 segundos
         }
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
 </body>
+<footer>
+
+    <p class="footer">
+
+        <a href="https://www.facebook.com/polvoramx">Polvora Publicidad 2024</a>.
+    </p>
+</footer>
 
 </html>
